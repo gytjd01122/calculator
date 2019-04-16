@@ -10,6 +10,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 @SpringBootTest
 public class CalculatorApplicationTests {
 	private Calculator calculator = new Calculator();
+
 	@Test
 	public void contextLoads() {
 	}
@@ -17,7 +18,19 @@ public class CalculatorApplicationTests {
     @Test
     public void testSum() {
         assertEquals(5, calculator.sum(2, 3));
-    }
+	}
+	@Test
+	public void testMinus(){
+		assertEquals (0, calculator.minus(3,3));
+	}
+	@Test
+	public void testCross(){
+		assertEquals (9, calculator.cross(3,3));
+	}
+	@Test
+	public void testDivide(){
+		assertEquals (1, calculator.cross(3,3));
+	}
 
 
 
