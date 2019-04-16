@@ -29,7 +29,8 @@ public class CalculatorApplicationTests {
 	}
 	@Test
 	public void testDivide(){
-		assertEquals (1, calculator.cross(3,3));
+		assertEquals (1, calculator.divide(3,3));
+		
 	}
 
 
