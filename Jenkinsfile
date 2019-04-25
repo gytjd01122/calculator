@@ -30,7 +30,7 @@ pipeline {
         stage("Static code analysis") {
             steps {
                 sh "./gradlew checkstyleMain"
-                PublishHTML (target: [
+                publishHTML (target: [
                     allowMissing: false,
                     alwaysLinkToLastBuild: false,
                     keepAll: true,
