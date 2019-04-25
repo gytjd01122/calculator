@@ -30,14 +30,14 @@ pipeline {
         stage("Static code analysis") {
             steps {
                 sh "./gradlew checkstyleMain"
-                publishHTML (target: [
-                    allowMissing: false,
-                    alwaysLinkToLastBuild: false,
-                    keepAll: true,
+                publishHTML target: [
+                    allowMissing: true, 
+                    alwaysLinkToLastBuild: false, 
+                    keepAll: false, 
                     reportDir: 'build/reports/checkstyle/',
                     reportFiles: 'main.html',
                     reportName: "Checkstyle Report"
-                ])
+                ]
             }
         }
         stage("Package") {
@@ -53,3 +53,5 @@ pipeline {
 
     }
 }
+
+
