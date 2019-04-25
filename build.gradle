@@ -32,4 +32,5 @@ jacocoTestCoverageVerification {
 
 checkstyle {
 	toolVersion "7.6.1"
+	configDir = file("$rootProject.projectDir/config/checkstyle")
 }
